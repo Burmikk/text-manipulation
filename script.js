@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     applyButton.addEventListener("click", function (event) {
         event.preventDefault();
-        const text = textInput.value;
+        const text = textInput.value.replaceAll(" ", "");
 
         for (let i = 0; i < text.length; i++) {
             const span = document.createElement("span");
